@@ -1,0 +1,96 @@
+/* ===== MENU ===== */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: var(--space-3);
+  background-color: var(--color-primary);
+  padding: var(--space-2);
+}
+
+nav ul li a {
+  color: var(--color-neutral-100);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--color-secondary-light);
+  text-decoration: underline;
+}
+
+/* ===== BOTÕES ===== */
+button, .btn {
+  background-color: var(--color-primary);
+  color: var(--color-neutral-100);
+  border: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 4px;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+button:disabled {
+  background-color: var(--color-neutral-500);
+  cursor: not-allowed;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form fieldset {
+  border: 1px solid var(--color-neutral-500);
+  border-radius: 8px;
+  margin-bottom: var(--space-3);
+  padding: var(--space-3);
+}
+
+form legend {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+label {
+  display: block;
+  margin-top: var(--space-2);
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: var(--space-2);
+  margin-top: var(--space-1);
+  border: 1px solid var(--color-neutral-500);
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+}
+
+input:focus {
+  outline: 2px solid var(--color-primary-light);
+}
+
+/* ===== ALERTAS ===== */
+.alert {
+  padding: var(--space-2);
+  border-radius: 4px;
+  margin: var(--space-2) 0;
+}
+
+.alert-success { background: #d4edda; color: #155724; }
+.alert-error { background: #f8d7da; color: #721c24; }
+
+/* ===== CARDS ===== */
+.card {
+  background-color: var(--color-neutral-100);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: var(--space-3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
