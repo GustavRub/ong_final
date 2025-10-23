@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('nav a');
   const main = document.querySelector('main');
 
+document.getElementById('toggle-theme').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+
   async function carregarPagina(url) {
     try {
       const resposta = await fetch(url);
