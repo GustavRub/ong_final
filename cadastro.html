@@ -5,69 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cadastro de voluntários e doadores da ONG nome.">
   <title>Cadastro - ONG nome</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-
 </head>
+
 <body>
-  <header>
-    <img src="assets/img/logo.png" alt="Logo da ONG nome" width="150">
-    <nav>
+  <!-- Link de acessibilidade -->
+  <a class="skip-link" href="#main">Pular para o conteúdo principal</a>
+
+  <!-- Cabeçalho -->
+  <header role="banner">
+    <img src="ong_ads_js/assets/img/logo.png" alt="Logo da ONG" width="150">
+
+    <nav role="navigation" aria-label="Menu principal">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h1>Cadastro de Voluntário / Apoiador</h1>
+  <!-- Conteúdo principal -->
+  <main role="main" id="main">
+    <h1 id="titulo-cadastro">Cadastro de Voluntário / Apoiador</h1>
 
-    <form action="#" method="post">
+    <form action="#" method="post" aria-labelledby="titulo-cadastro">
       <fieldset>
         <legend>Informações Pessoais</legend>
 
         <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input type="text" id="nome" name="nome" required aria-required="true">
 
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="ajuda-email">
+        <small id="ajuda-email">Digite um e-mail válido, ex: nome@exemplo.com</small>
 
         <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+        <input type="text" id="cpf" name="cpf" required aria-required="true" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
 
         <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(11) 91234-5678">
-
-        <label for="data">Data de Nascimento:</label>
-        <input type="date" id="data" name="data" required>
+        <input type="tel" id="telefone" name="telefone" required aria-required="true" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(11) 91234-5678">
       </fieldset>
 
       <fieldset>
         <legend>Endereço</legend>
 
         <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" required>
+        <input type="text" id="endereco" name="endereco" required aria-required="true">
 
         <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="00000-000">
+        <input type="text" id="cep" name="cep" required aria-required="true" pattern="\d{5}-\d{3}" placeholder="00000-000">
 
         <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required>
+        <input type="text" id="cidade" name="cidade" required aria-required="true">
 
         <label for="estado">Estado:</label>
-        <input type="text" id="estado" name="estado" required>
+        <input type="text" id="estado" name="estado" required aria-required="true">
       </fieldset>
 
-      <button type="submit">Enviar Cadastro</button>
+      <button type="submit" aria-label="Enviar formulário de cadastro">Enviar Cadastro</button>
     </form>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ONG nome</p>
+  <!-- Rodapé -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 ONG Nome. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>

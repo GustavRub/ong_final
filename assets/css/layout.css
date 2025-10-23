@@ -1,10 +1,55 @@
-header, footer {
+/* ==============================
+📦 LAYOUT GERAL
+============================== */
+
+header,
+footer {
   background-color: var(--color-primary);
   color: var(--color-neutral-100);
   text-align: center;
   padding: var(--space-2);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Mantém a logo e a navegação bem organizadas */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--space-2) var(--space-4);
+}
+
+header img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* ==============================
+🧭 NAVEGAÇÃO
+============================== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-3);
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-neutral-100);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--color-secondary-light);
+  text-decoration: underline;
+}
+
+/* ==============================
+🧱 CONTEÚDO PRINCIPAL
+============================== */
 main {
   max-width: 1200px;
   margin: auto;
@@ -14,9 +59,61 @@ main {
   gap: var(--space-3);
 }
 
-section, form {
+/* Seções e formulários com sombra e contraste */
+section,
+form {
   background-color: var(--color-neutral-100);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: var(--space-3);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==============================
+🕶️ MODO ESCURO (DARK MODE)
+============================== */
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode nav a {
+  color: #ffd700;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode nav a:focus {
+  color: #ffea00;
+}
+
+body.dark-mode section,
+body.dark-mode form {
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* ==============================
+📱 RESPONSIVIDADE
+============================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  main {
+    padding: var(--space-2);
+  }
+
+  section,
+  form {
+    padding: var(--space-2);
+  }
 }

@@ -1,3 +1,6 @@
+/* ==============================
+🎨 SISTEMA DE DESIGN BASE
+============================== */
 :root {
   /* 🎨 Paleta de Cores */
   --color-primary: #0066cc;
@@ -24,8 +27,17 @@
   --space-4: 32px;
   --space-5: 48px;
   --space-6: 64px;
+
+  /* 🌗 Cores Dinâmicas (modo claro/escuro) */
+  --bg-color: var(--color-neutral-100);
+  --text-color: var(--color-neutral-900);
+  --link-color: var(--color-primary);
+  --link-hover: var(--color-primary-light);
 }
 
+/* ==============================
+🧱 RESET E TIPOGRAFIA GLOBAL
+============================== */
 * {
   margin: 0;
   padding: 0;
@@ -34,22 +46,52 @@
 }
 
 body {
-  background-color: var(--color-neutral-200);
-  color: var(--color-neutral-900);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #222222;
+/* ==============================
+🔗 LINKS E INTERAÇÕES
+============================== */
+a {
+  color: var(--link-color);
+  text-decoration: none;
 }
 
+a:hover,
+a:focus {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ==============================
+🕶️ MODO ESCURO (Acessível)
+============================== */
 body.dark-mode {
   --bg-color: #121212;
   --text-color: #f1f1f1;
+  --link-color: #ffd700;
+  --link-hover: #ffea00;
 }
 
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
+/* ==============================
+⌨️ ACESSIBILIDADE
+============================== */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  outline: 2px solid #ffd700;
 }

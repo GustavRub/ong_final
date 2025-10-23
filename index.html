@@ -5,45 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ONG nome - Projetos sociais, voluntariado e doações.">
   <title>ONG nome - Início</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-
-
 </head>
+
 <body>
-  <header>
-    <button id="toggle-theme">🌓 Modo Escuro</button>
-    <img src="assets/img/logo.png" alt="Logo da ONG" width="250">
-    <nav>
+  <!-- Link de acessibilidade -->
+  <a class="skip-link" href="#main">Pular para o conteúdo principal</a>
+
+  <!-- Cabeçalho -->
+  <header role="banner">
+    
+   <img src="ong_ads_js/assets/img/logo.png" alt="Logo da ONG" width="150">
+
+
+    <nav role="navigation" aria-label="Menu principal">
       <ul>
-        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html" aria-current="page">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h1>Bem-vindo à ONG nome</h1>
+  <!-- Conteúdo principal -->
+  <main role="main" id="main">
+    <section aria-labelledby="titulo-bemvindo">
+      <h1 id="titulo-bemvindo">Bem-vindo à ONG Nome</h1>
       <p>Transformando vidas por meio da solidariedade e inclusão social.</p>
       <img src="assets/img/voluntarios.jpg" alt="Voluntários em ação" width="300">
     </section>
 
-    <section>
-      <h2>Missão</h2>
+    <section aria-labelledby="titulo-missao">
+      <h2 id="titulo-missao">Missão</h2>
       <p>Promover justiça social e cidadania por meio de projetos de educação, saúde e cultura.</p>
     </section>
 
-    <section>
-      <h2>Visão</h2>
+    <section aria-labelledby="titulo-visao">
+      <h2 id="titulo-visao">Visão</h2>
       <p>Construir uma sociedade mais solidária e com oportunidades para todos.</p>
     </section>
 
-    <section>
-      <h2>Valores</h2>
+    <section aria-labelledby="titulo-valores">
+      <h2 id="titulo-valores">Valores</h2>
       <ul>
         <li>Empatia</li>
         <li>Transparência</li>
@@ -53,11 +61,12 @@
     </section>
   </main>
 
-  <footer>
+  <!-- Rodapé -->
+  <footer role="contentinfo">
     <h3>Contato</h3>
-    <p>Email: contato@ongname.org</p>
-    <p>Telefone: (XX) XXXXX-XXXX</p>
-    <p>Endereço: Rua xxx, xx - cidade/sigla estado</p>
+    <p><strong>Email:</strong> <a href="mailto:contato@ongname.org">contato@ongname.org</a></p>
+    <p><strong>Telefone:</strong> (XX) XXXXX-XXXX</p>
+    <p><strong>Endereço:</strong> Rua xxx, xx - Cidade/UF</p>
   </footer>
 </body>
 </html>
